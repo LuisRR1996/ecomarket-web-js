@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket | Productos</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS Personalizado (Nota el ../ para salir de la carpeta pages) -->
+    <link rel="stylesheet" href="../src/css/estilos.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- CABECERA -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../src/img/Logo_EcoMarket.jpeg" alt="Logo de EcoMarket" height="60"
+                        style="border-radius: 8px;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <!-- Enlace al inicio (afuera de la carpeta) -->
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Negrita porque estamos en Productos -->
+                            <a class="nav-link active fw-bold" href="Página_de_Productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Página_de_Contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center">
+                        <span class="fs-4 me-2">🛒</span>
+                        <span id="contador-carrito" class="badge bg-success rounded-pill fs-6">0</span>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <main class="flex-grow-1 container py-5 text-center">
+        <h2 class="display-5 fw-bold mb-5">Nuestro Catálogo Orgánico</h2>
+
+        <!-- Cuadrícula de 6 productos -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+
+            <!-- Producto 1 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm tarjeta-producto">
+                    <img src="../src/img/Producto 1.png" class="card-img-top p-3" alt="Tomates Cherry">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Tomates Cherry</h5>
+                        <p class="card-text text-success fw-bold fs-5">$4.50</p>
+                        <button id="btn-prod-1" class="btn btn-outline-success btn-sm rounded-pill px-4 fw-bold"
+                            onclick="agregarAlCarrito()">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm tarjeta-producto">
+                    <img src="../src/img/Producto 2.png" class="card-img-top p-3" alt="Espinaca Fresca">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Espinaca Fresca</h5>
+                        <p class="card-text text-success fw-bold fs-5">$2.80</p>
+                        <button id="btn-prod-2" class="btn btn-outline-success btn-sm rounded-pill px-4 fw-bold"
+                            onclick="agregarAlCarrito()">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm tarjeta-producto">
+                    <img src="../src/img/Producto 3.png" class="card-img-top p-3" alt="Miel Artesanal">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Miel Artesanal</h5>
+                        <p class="card-text text-success fw-bold fs-5">$8.00</p>
+                        <button id="btn-prod-3" class="btn btn-outline-success btn-sm rounded-pill px-4 fw-bold"
+                            onclick="agregarAlCarrito()">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm tarjeta-producto">
+                    <img src="../src/img/Producto 4.png" class="card-img-top p-3" alt="Quinua Orgánica">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Quinua Orgánica</h5>
+                        <p class="card-text text-success fw-bold fs-5">$6.20</p>
+                        <button id="btn-prod-4" class="btn btn-outline-success btn-sm rounded-pill px-4 fw-bold"
+                            onclick="agregarAlCarrito()">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm tarjeta-producto">
+                    <img src="../src/img/Producto 5.png" class="card-img-top p-3" alt="Paltas Frescas">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Paltas Frescas (kg)</h5>
+                        <p class="card-text text-success fw-bold fs-5">$5.50</p>
+                        <button id="btn-prod-5" class="btn btn-outline-success btn-sm rounded-pill px-4 fw-bold"
+                            onclick="agregarAlCarrito()">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm tarjeta-producto">
+                    <img src="../src/img/Producto 6.png" class="card-img-top p-3" alt="Zanahorias con hoja">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Zanahorias (Manojo)</h5>
+                        <p class="card-text text-success fw-bold fs-5">$3.00</p>
+                        <button id="btn-prod-6" class="btn btn-outline-success btn-sm rounded-pill px-4 fw-bold"
+                            onclick="agregarAlCarrito()">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <div class="mb-3">
+                <a href="#" class="text-white me-3 fs-4 text-decoration-none"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3 fs-4 text-decoration-none"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white fs-4 text-decoration-none"><i class="bi bi-tiktok"></i></a>
+            </div>
+            <p class="mb-0">© 2026 EcoMarket - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS -->
+    <script src="../src/js/script.js"></script>
+</body>
+
+</html>

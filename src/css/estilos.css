@@ -1,0 +1,42 @@
+/* src/css/estilos.css */
+
+/* Estilos para la sección principal (Hero) */
+.hero-section {
+    background-image: url('../img/imagen_principal.png');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
+
+/* Dejamos el texto libre, solo con una sombra para que se lea bien */
+.hero-content {
+    max-width: 800px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* --- NUEVO: Animación para las tarjetas de productos --- */
+.tarjeta-producto {
+    /* Prepara la tarjeta para que el movimiento sea suave (0.3 segundos) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lo que ocurre cuando el mouse pasa por encima (:hover) */
+.tarjeta-producto:hover {
+    transform: translateY(-10px);
+    /* Levanta la tarjeta 10 píxeles hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+    /* Hace la sombra más grande */
+    cursor: pointer;
+    /* Cambia el cursor a una manito */
+}
+
+/* Efecto hover - íconos de redes sociales */
+footer a i {
+    transition: color 0.3s ease;
+}
+
+footer a:hover i {
+    color: #198754;
+    /* Botón verde Bootstrap */
+}

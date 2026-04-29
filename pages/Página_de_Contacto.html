@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket | Contacto</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS Personalizado (Ruta saliendo de la carpeta pages) -->
+    <link rel="stylesheet" href="../src/css/estilos.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- CABECERA -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../src/img/Logo_EcoMarket.jpeg" alt="Logo de EcoMarket" height="60"
+                        style="border-radius: 8px;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Página_de_Productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Negrita porque estamos en Contacto -->
+                            <a class="nav-link active fw-bold" href="Página_de_Contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center">
+                        <span class="fs-4 me-2">🛒</span>
+                        <span id="contador-carrito" class="badge bg-success rounded-pill fs-6">0</span>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN DE CONTACTO -->
+    <main class="flex-grow-1 container py-5">
+        <h2 class="display-5 fw-bold text-center mb-5">Contáctanos</h2>
+
+        <div class="row g-5">
+            <!-- Columna Izquierda: Formulario -->
+            <div class="col-md-6">
+                <form id="formulario-contacto" class="bg-white p-4 rounded shadow-sm border">
+                    <fieldset>
+                        <legend class="fw-bold mb-4">Envíanos un mensaje</legend>
+
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" id="nombre" class="form-control bg-light"
+                                placeholder="Tu nombre completo">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo:</label>
+                            <input type="email" id="correo" class="form-control bg-light" placeholder="tu@correo.com">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="mensaje" class="form-label">Mensaje:</label>
+                            <textarea id="mensaje" class="form-control bg-light" rows="5"
+                                placeholder="¿En qué te podemos ayudar?"></textarea>
+                        </div>
+
+                        <button type="button" class="btn btn-secondary px-4 rounded-pill fw-bold"
+                            onclick="validarFormulario()">Enviar</button>
+                    </fieldset>
+                </form>
+                <!-- Mensaje de éxito o error con JS -->
+                <div id="mensaje-alerta" class="mt-3"></div>
+            </div>
+
+            <!-- Columna Derecha: Información y Mapa -->
+            <div class="col-md-6">
+                <div class="h-100 d-flex flex-column">
+                    <div class="mb-4">
+                        <h4 class="fw-bold"><i class="bi bi-geo-alt-fill text-success me-2"></i>Mapa de ubicación:</h4>
+
+                        <p class="mb-1 mt-3"><strong>Visítanos en nuestra tienda central:</strong></p>
+                        <p class="text-muted">📍 Av. Los Ecológicos 1045, San Isidro, Lima.</p>
+
+                        <p class="mb-1 mt-3"><strong>Atención al cliente:</strong></p>
+                        <p class="text-muted mb-0">📞 Teléfono: +51 987 654 321</p>
+                        <p class="text-muted">✉️ Correo: hola@ecomarket.pe</p>
+
+                        <p class="mb-1 mt-3"><strong>Horario de atención:</strong></p>
+                        <p class="text-muted mb-0">Lunes a Sábado: 8:00 AM - 8:00 PM</p>
+                        <p class="text-muted">Domingos: Cerrado (¡La tierra también descansa!)</p>
+                    </div>
+
+                    <!-- Mapa real incrustado con Google Maps -->
+                    <div class="rounded overflow-hidden shadow-sm flex-grow-1 d-flex" style="min-height: 250px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.716183495444!2d-77.03755252416035!3d-12.094595243501726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c866d98c2535%3A0xc665c9284206e8b8!2sSan%20Isidro%2C%20Lima!5e0!3m2!1ses-419!2spe!4v1714389145000!5m2!1ses-419!2spe"
+                            width="100%" height="100%" style="border:0; min-height: 250px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <div class="mb-3">
+                <a href="#" class="text-white me-3 fs-4 text-decoration-none"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3 fs-4 text-decoration-none"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white fs-4 text-decoration-none"><i class="bi bi-tiktok"></i></a>
+            </div>
+            <p class="mb-0">© 2026 EcoMarket - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tu JS -->
+    <script src="../src/js/script.js"></script>
+</body>
+
+</html>
